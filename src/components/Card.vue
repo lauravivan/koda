@@ -23,6 +23,7 @@ const categoryIcons: {
       <component :is="categoryIcons[props.category]" />
       <div class="c-card__content">
         <h3>{{ props.title }}</h3>
+        <div></div>
         <p>{{ props.desc }}</p>
       </div>
     </a>
@@ -37,7 +38,6 @@ const categoryIcons: {
   display: flex;
   border-radius: 10px;
   border: 1px solid var(--border);
-  box-shadow: var(--shadow);
   position: relative;
   background-color: var(--bg);
 }
@@ -49,30 +49,41 @@ const categoryIcons: {
 .c-card a {
   flex: 1;
   display: flex;
-  row-gap: 10px;
-  flex-direction: column;
+  column-gap: 10px;
   align-items: flex-start;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  padding: 10px 20px 10px;
+  padding: 18px 20px 20px;
   text-decoration: none;
 }
 
 .c-card__content {
   display: flex;
   flex-direction: column;
-  row-gap: 10px;
+  row-gap: 5px;
+}
+
+.c-card__content h3 {
+  font-weight: 900;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.c-card__content div {
+  height: 2px;
+  width: 30%;
+  background-color: var(--text);
 }
 
 .c-card__content p {
   color: var(--text);
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .c-card a svg {
   flex: none;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
 }
 
 .c-card__bookmark svg path,
@@ -82,12 +93,12 @@ const categoryIcons: {
 
 .c-card__bookmark {
   position: absolute;
-  right: 0;
+  right: 5%;
   top: -2px;
 }
 
 .c-card__bookmark svg {
-  height: 30px;
-  width: 30px;
+  height: 24px;
+  width: 24px;
 }
 </style>

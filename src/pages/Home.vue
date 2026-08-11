@@ -98,7 +98,7 @@ const selectMenuItem = (item: string) => {
 .p-homepage__links {
   display: flex;
   flex-direction: column;
-  row-gap: 30px;
+  row-gap: 10px;
   height: 100%;
   width: 60%;
   max-height: 100%;
@@ -115,15 +115,16 @@ const selectMenuItem = (item: string) => {
 .p-homepage__links__subcategories__subcategory {
   display: flex;
   flex-direction: column;
-  row-gap: 20px;
+  row-gap: 15px;
   width: 100%;
+  background-color: var(--code-bg);
+  padding: 20px 20px 30px;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
 }
 
 .p-homepage__links__subcategories__subcategory h2 {
-  background-color: var(--code-bg);
-  font-size: 22px;
-  padding: 12px 15px;
-  border-radius: 7px;
+  font-size: 1.5rem;
 }
 
 .p-homepage__links__subcategories__subcategory > div {
