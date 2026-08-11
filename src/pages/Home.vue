@@ -75,7 +75,7 @@ const selectMenuItem = (item: string) => {
   background-size: cover;
   background-position: start;
   background-repeat: no-repeat;
-  opacity: 0.3;
+  opacity: 0.1;
   z-index: -1;
 }
 
