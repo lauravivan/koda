@@ -61,6 +61,7 @@ const switchTheme = () => {
 .c-header {
   display: flex;
   column-gap: 20px;
+  height: var(--header-height);
   padding: 20px;
   align-items: center;
   justify-content: space-between;

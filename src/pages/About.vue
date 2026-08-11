@@ -17,6 +17,7 @@
 <style lang="css">
 .p-about {
   display: flex;
+  column-gap: 30px;
   height: 100%;
   width: 100%;
   padding: 20px 20px 0px;
@@ -44,20 +45,7 @@
 }
 
 .p-about__info {
-  flex: 2;
   padding: 40px;
-
-  @media (max-width: 480px) {
-    flex: 1;
-  }
-}
-
-.p-about__img-wrapper {
-  flex: 2;
-
-  @media (max-width: 480px) {
-    flex: 1;
-  }
 }
 
 .p-about__img-wrapper img {

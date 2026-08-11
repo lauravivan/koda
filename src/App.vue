@@ -74,10 +74,9 @@ const handleSearch = (event: SubmitEvent) => {
 
 <style lang="css">
 .koda-app {
-  height: calc(100vh - var(--header-height));
+  height: calc(100% - var(--header-height));
   display: flex;
   width: 100%;
-  min-height: 100%;
 }
 
 .search-results {
