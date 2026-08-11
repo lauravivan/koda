@@ -14,6 +14,7 @@ const data: Data = {
       {
         title: "Typescript in 50 lessons",
         link: "https://typescript-book.com/",
+        desc: "Everything you need to know about TypeScript in 50 short lessons",
       },
       {
         title: "concorrencia101",
@@ -80,11 +81,49 @@ const data: Data = {
         link: "https://www.maujor.com/",
         desc: "Ensinamentos de CSS",
       },
-    ],
-    design: [
       {
-        title: "Web design resources",
-        link: "https://vakoshvili.com/resource",
+        title: "Guia Foca",
+        link: "https://www.guiafoca.org/",
+        desc: "O GuiaFoca é um guia que traz desde explicações básicas sobre computadores e o sistema GNU/Linux até a administração e segurança do sistema.",
+      },
+      {
+        title: "Inclusive components",
+        link: "https://inclusive-components.design/",
+        desc: "A blog trying to be a pattern library. All about designing inclusive web interfaces, piece by piece.",
+      },
+      {
+        title: "OWASP",
+        link: "https://owasp.org/",
+        desc: "Explore the world of cyber security",
+      },
+      {
+        title: "Understanding Interaction to Next Paint (INP)",
+        link: "https://codelabs.developers.google.com/understanding-inp",
+      },
+      {
+        title: "Dropbox Engineering Career Framework",
+        link: "https://dropbox.github.io/dbx-career-framework/overview.html",
+      },
+      {
+        title: "JavaScript reference",
+        link: "https://devdocs.io/javascript/",
+      },
+    ],
+    acessibility: [
+      {
+        title: "Cartilhas de diversidade e inclusão",
+        link: "https://egg.seplag.niteroi.rj.gov.br/diversidade-e-inclusao/",
+        desc: "Possuem ações que podem ser adotadas para fazer a diferença, conceitos que precisam ser repensados e outros locais e conteúdos para se aprofundar mais em determinadas questões.",
+      },
+      {
+        title: "Guia de Boas Práticas para Acessibilidade Digital",
+        link: "https://www.gov.br/governodigital/pt-br/acessibilidade-e-usuario/acessibilidade-digital/guiaboaspraaticasparaacessibilidadedigital.pdf",
+        desc: "Programa de Cooperação entre Reino Unido e Brasil em Acesso Digital",
+      },
+      {
+        title: "eMAG - Modelo de Acessibilidade em Governo Eletrônico",
+        link: "https://emag.governoeletronico.gov.br/",
+        desc: "O Modelo de Acessibilidade em Governo Eletrônico (eMAG) tem o compromisso de ser o norteador no desenvolvimento e a adaptação de conteúdos digitais do governo federal, garantindo o acesso a todos.",
       },
     ],
   },
@@ -97,6 +136,36 @@ const data: Data = {
       {
         title: "Daniel Castro",
         link: "https://danieldcs.com/",
+      },
+      {
+        title: "Reinaldo Ferraz",
+        link: "https://reinaldoferraz.com.br/",
+        desc: "Site do Reinaldo Ferraz que traz artigos, cursos, livros, etc",
+      },
+      {
+        title: "Academind",
+        link: "https://academind.com/articles",
+        desc: "Site da academind que traz cursos, artigos, etc",
+      },
+      {
+        title: "Irrational Exuberance",
+        link: "https://lethain.com/",
+      },
+      {
+        title: "Josh Comeau",
+        link: "https://www.joshwcomeau.com/",
+      },
+      {
+        title: "Nitin Ranganath",
+        link: "https://vscode-portfolio.vercel.app/",
+      },
+      {
+        title: "Felipe Marciano",
+        link: "https://www.fx.dev.br/",
+      },
+      {
+        title: "Adrian Roselli",
+        link: "https://adrianroselli.com/",
       },
     ],
   },
@@ -155,6 +224,66 @@ const data: Data = {
         title: "Web dev simplified blog",
         link: "https://blog.webdevsimplified.com/",
       },
+      {
+        title: "Uma Introdução Completa aos Componentes da Web",
+        link: "https://kinsta.com/pt/blog/componentes-web/",
+      },
+      {
+        title: "Tudo que você precisa saber pra usar Docker",
+        link: "https://blog.cadumagalhaes.dev/tudo-que-voce-precisa-saber-pra-usar-docker",
+      },
+      {
+        title: "Generative AI exists because of the transformer",
+        link: "https://ig.ft.com/generative-ai/",
+      },
+      {
+        title: "Send emails in Node.js using Nodemailer, Gmail & oAuth2",
+        link: "https://rupali.hashnode.dev/send-emails-in-nodejs-using-nodemailer-gmail-oauth2#heading-configure-oauth-consent-screen",
+      },
+      {
+        title:
+          "Blogged Answers: A (Mostly) Complete Guide to React Rendering Behavior",
+        link: "https://blog.isquaredsoftware.com/2020/05/blogged-answers-a-mostly-complete-guide-to-react-rendering-behavior/",
+      },
+      {
+        title: "Airbnb Tech Blog",
+        link: "https://airbnb.tech/blog/",
+        desc: "Learn about the people, ideas, and technology at the heart of Airbnb",
+      },
+      {
+        title:
+          "Creating React Components that can be Controlled and Uncontrolled",
+        link: "https://maxschmitt.me/posts/react-components-controlled-uncontrolled",
+      },
+      {
+        title: "Yalc, the `npm link` alternative that does work",
+        link: "https://www.divotion.com/blog/yalc-npm-link-alternative-that-does-work",
+      },
+    ],
+    learning: [
+      {
+        title: "How do I learn X",
+        link: "https://blog.ncase.me/how-do-i-learn-x/",
+      },
+    ],
+    design: [
+      {
+        title: "Nielsen Norman Group",
+        link: "https://www.nngroup.com/articles/",
+        desc: "UX research & guidelines",
+      },
+      {
+        title: "Prototypr",
+        link: "https://prototypr.io/",
+        desc: "UX research & guidelines",
+      },
+    ],
+    acessibility: [
+      {
+        title:
+          "PRÁTICAS DE ACESSIBILIDADE PARA PCD (PESSOAS COM DEFICIÊNCIA) EM SOFTWARE E SISTEMAS WEB",
+        link: "https://revista.fatectq.edu.br/interfacetecnologica/en/article/view/1740/938",
+      },
     ],
   },
   podcasts: {
@@ -206,6 +335,10 @@ const data: Data = {
       {
         title: "Brasil aberto",
         link: "https://brasilaberto.com/",
+      },
+      {
+        title: "API para desenvolvedores",
+        link: "https://api.invertexto.com/",
       },
     ],
   },
@@ -260,6 +393,67 @@ const data: Data = {
         title: "I Love IMG",
         link: "https://www.iloveimg.com/",
       },
+      {
+        title: "Photoroom",
+        link: "https://www.photoroom.com/tools/background-remover",
+      },
+    ],
+    illustrations: [
+      {
+        title: "unDraw",
+        link: "https://undraw.co/illustrations/",
+        desc: "Open-source illustrations for any idea you can imagine and create.",
+      },
+      {
+        title: "storyset",
+        link: "https://storyset.com/",
+        desc: "Awesome free customizable illustrations for your next project",
+      },
+      {
+        title: "humaaans",
+        link: "https://www.humaaans.com/",
+        desc: "Mix-&-match illustrations of people with a design library",
+      },
+    ],
+    icons: [
+      {
+        title: "iconmonstr",
+        link: "https://iconmonstr.com/",
+        desc: "Discover 4784+ free icons in 316 collections",
+      },
+      {
+        title: "streamline",
+        link: "https://home.streamlinehq.com/",
+        desc: "Your Ultimate Icon Library",
+      },
+      {
+        title: "Icons DB",
+        link: "https://www.iconsdb.com/",
+      },
+      {
+        title: "FlatIcon",
+        link: "https://www.flaticon.com/",
+      },
+      {
+        title: "Ionicons",
+        link: "https://ionic.io/ionicons",
+      },
+    ],
+    ["design inspirations"]: [
+      {
+        title: "lapa",
+        link: "https://www.lapa.ninja/",
+        desc: "The Best Landing Page Design Inspiration, Learn Design and More",
+      },
+      {
+        title: "typespiration",
+        link: "https://typespiration.com/",
+        desc: "Free Font Combinations and Color Palettes to Inspire Your Designs",
+      },
+      {
+        title: "Lemonade",
+        link: "https://www.lemonade.com/giveback-2019",
+      },
     ],
     colors: [
       {
@@ -290,25 +484,28 @@ const data: Data = {
         title: "Color Contrast Checker",
         link: "https://codepen.io/alvaromontoro/pen/YgpWZG",
       },
-    ],
-    icons: [
       {
-        title: "Icons DB",
-        link: "https://www.iconsdb.com/",
+        title: "Huemint",
+        link: "https://huemint.com/",
+        desc: "Color palette generator",
       },
       {
-        title: "FlatIcon",
-        link: "https://www.flaticon.com/",
+        title: "TailwindColors",
+        link: "https://tailwindcolor.com/",
       },
       {
-        title: "Ionicons",
-        link: "https://ionic.io/ionicons",
+        title: "color generator",
+        link: "https://kigen.design/color",
       },
     ],
     fonts: [
       {
         title: "Google fonts",
         link: "https://fonts.google.com/",
+      },
+      {
+        title: "Online WebFonts",
+        link: "https://www.onlinewebfonts.com/fonts",
       },
     ],
     audiovisual: [
@@ -354,6 +551,14 @@ const data: Data = {
         title: "Pug.js to HTML",
         link: "https://pughtml.com/",
       },
+      {
+        title: "HTML to PDF",
+        link: "https://wkhtmltopdf.org/index.html",
+      },
+      {
+        title: "Webp converter",
+        link: "https://cloudconvert.com/webp-converter",
+      },
     ],
     performance: [
       {
@@ -371,6 +576,81 @@ const data: Data = {
       {
         title: "ES6 Compatibility",
         link: "https://compat-table.github.io/compat-table/es6/",
+      },
+    ],
+    generators: [
+      {
+        title: "Gerador NV",
+        link: "https://geradornv.com.br/",
+        desc: "Auxiliar desenvolvedores, analistas de sistemas, DBAs, testadores de software e estudantes na geração de números de documentos válidos, frequentemente necessários para testar seus softwares em desenvolvimento.",
+      },
+    ],
+    tech: [
+      {
+        title: "htmx",
+        link: "https://htmx.org/docs/",
+        desc: "htmx is a library that allows you to access modern browser features directly from HTML, rather than using javascript.",
+      },
+      {
+        title: "runjs",
+        link: "https://runjs.app/play",
+        desc: "Online JavaScript Playground",
+      },
+      {
+        title: "Metabase",
+        link: "https://www.metabase.com/",
+        desc: "Open source AI analytics you can verify",
+      },
+      {
+        title: "Effect",
+        link: "https://www.effect.website/",
+      },
+      {
+        title: "threejs",
+        link: "https://threejs.org/",
+      },
+      {
+        title: "Free Online and Web-Based Tools",
+        link: "https://www.toptal.com/utilities-tools",
+      },
+      {
+        title: "JavaScript Key Code",
+        link: "https://www.toptal.com/developers/keycode",
+      },
+      {
+        title: "Bundlephobia",
+        link: "https://bundlephobia.com/",
+        desc: "find the cost of adding a npm package to your bundle",
+      },
+      {
+        title: "drawDB",
+        link: "https://www.drawdb.app/",
+        desc: "The visual database schema tool for clear, fast, collaborative design.",
+      },
+      {
+        title: "Markdown Live Preview",
+        link: "https://markdownlivepreview.com/",
+      },
+    ],
+    content: [
+      {
+        title: "Free & Premium stock content made for creators",
+        link: "https://www.magnific.com/stock",
+      },
+      {
+        title: "Milanote",
+        link: "https://milanote.com/",
+      },
+      {
+        title: "ICONS",
+        link: "https://icons8.com/",
+      },
+    ],
+    resume: [
+      {
+        title: "ResumeMaker.Online",
+        link: "https://www.resumemaker.online/free-tools/resume-checker-free",
+        desc: "AI Resume Checker: Get a Free Resume Review & Score",
       },
     ],
   },
@@ -444,6 +724,82 @@ const data: Data = {
         title: "Excalidraw",
         link: "https://excalidraw.com/",
       },
+      {
+        title: "Rome2Rio",
+        link: "https://www.rome2rio.com/",
+      },
+      {
+        title: "VS Code Themes",
+        link: "https://vscodethemes.com/",
+      },
+      {
+        title: "Raycast",
+        link: "https://www.raycast.com/",
+      },
+      {
+        title: "monkeytype",
+        link: "https://monkeytype.com/",
+      },
+      {
+        title: "Web Design Museum",
+        link: "https://www.webdesignmuseum.org/gallery",
+        desc: "Gallery of Web Design History",
+      },
+      {
+        title: "Internet Archive",
+        link: "https://archive.org/",
+        desc: "Internet Archive is a non-profit library of millions of free texts, movies, software, music, websites, and more.",
+      },
+      {
+        title: "AOTY",
+        link: "https://www.albumoftheyear.org/",
+      },
+      {
+        title: "Laboratório Virtual de Física Simulações Interativas",
+        link: "https://www.laboratoriovirtual.fisica.ufc.br/",
+      },
+      {
+        title: "Studio ghibli filmografia",
+        link: "https://studioghibli.com.br/filmografia/",
+      },
+      {
+        title: "Readme Typing SVG",
+        link: "https://readme-typing-svg.herokuapp.com/demo/",
+      },
+      {
+        title: "Skill Icons",
+        link: "https://skillicons.dev/",
+      },
+      {
+        title: "Brilliant",
+        link: "https://brilliant.org/",
+      },
+      {
+        title: "Lumon industries",
+        link: "https://lumon-industries.com/",
+      },
+      {
+        title: "Word tips",
+        link: "https://word.tips/",
+      },
+      {
+        title: "Can I use",
+        link: "https://caniuse.com/",
+      },
+    ],
+    games: [
+      {
+        title: "what beats rock?",
+        link: "https://www.whatbeatsrock.com/",
+      },
+      {
+        title: "Learn VIM",
+        link: "https://vim-adventures.com/",
+      },
+      {
+        title: "Horizon drive",
+        link: "https://www.shopify.com/ca/editions/summer2025/drive",
+      },
     ],
   },
   exercises: {
@@ -465,6 +821,19 @@ const data: Data = {
       {
         title: "Hackerrank",
         link: "https://www.hackerrank.com/dashboard",
+      },
+      {
+        title: "Leetcode",
+        link: "https://leetcode.com/explore/",
+      },
+    ],
+  },
+  useful: {
+    finance: [
+      {
+        title: "Códigos bancários Febraban",
+        link: "https://abrircontacorrente.com.br/codigos-bancarios-febraban/",
+        desc: "Cada banco, instituição financeira e/ou fintech possui um código que o identifica junto a Federação Brasileira de Bancos (FEBRABAN), órgão que regulamenta e regulariza as instituições financeiras em funcionamento no Brasil. Saber o número de compensação bancária é extremamente importante quando realizamos transferências bancárias como Ted, Doc.",
       },
     ],
   },
