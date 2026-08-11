@@ -786,6 +786,18 @@ const data: Data = {
         title: "Can I use",
         link: "https://caniuse.com/",
       },
+      {
+        title: "Suncalc",
+        link: "https://www.suncalc.org",
+      },
+      {
+        title: "Suncalc",
+        link: "https://suncalc.net",
+      },
+      {
+        title: "Igor Kieryluk",
+        link: "https://www.artstation.com/igorkieryluk",
+      },
     ],
     games: [
       {
