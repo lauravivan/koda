@@ -4,9 +4,21 @@ import Aside from "./components/Aside.vue";
 import Card from "./components/Card.vue";
 import data from "./data.ts";
 import About from "./components/About.vue";
+import Modal from "./components/Modal.vue";
 
 type ViewType = "LINKS" | "ABOUT";
 
+const search = ref("");
+const isModalOpen = ref(false);
+const searchResults = ref<
+  Array<{
+    section: string;
+    category: string;
+    title: string;
+    link: string;
+    desc?: string;
+  }>
+>([]);
 const view = ref<ViewType>("LINKS");
 
 const category = ref("books");
@@ -18,6 +30,38 @@ const selectMenuItem = (item: string) => {
 const handleView = (v: ViewType) => {
   view.value = v;
 };
+
+const handleSearch = (event: SubmitEvent) => {
+  searchResults.value = [];
+  const formData = new FormData(event.target as HTMLFormElement);
+
+  isModalOpen.value = true;
+
+  const s = formData.get("search") as string;
+
+  search.value = s;
+
+  const q = s.toLowerCase().trim();
+  if (!q) return [];
+
+  for (const [section, categories] of Object.entries(data)) {
+    for (const [category, items] of Object.entries(categories)) {
+      for (const item of items) {
+        const matches =
+          item.title.toLowerCase().includes(q) ||
+          item.desc?.toLowerCase().includes(q);
+
+        if (matches) {
+          searchResults.value.push({ ...item, section, category });
+        }
+      }
+    }
+  }
+};
+
+const handleModalOpen = (isOpen: boolean) => {
+  isModalOpen.value = isOpen;
+};
 </script>
 
 <template>
@@ -26,9 +70,9 @@ const handleView = (v: ViewType) => {
       <img src="./assets/mascot.svg" />
       <span>Koda</span>
     </div>
-    <button v-on:click="handleView('ABOUT')">About</button>
-    <form>
-      <input placeholder="Search..." />
+    <button @click="handleView('ABOUT')">About</button>
+    <form method="get" @submit.prevent="handleSearch">
+      <input name="search" id="search" placeholder="Search..." />
     </form>
   </header>
   <main class="koda-app">
@@ -58,6 +102,22 @@ const handleView = (v: ViewType) => {
     <template v-if="view === 'ABOUT'">
       <About />
     </template>
+
+    <Modal :handleModalOpen="handleModalOpen" :isModalOpen="isModalOpen">
+      <div v-if="searchResults.length > 0" class="search-results">
+        <span
+          >Results for
+          <span class="search-results__search">{{ search }}</span></span
+        >
+        <div class="search-results__item" v-for="res in searchResults">
+          <a target="_blank" :href="res.link"
+            ><h3>{{ res.title }}</h3>
+          </a>
+          <p>{{ res.desc }}</p>
+        </div>
+      </div>
+      <div v-if="searchResults.length === 0"></div>
+    </Modal>
   </main>
 </template>
 
@@ -143,5 +203,27 @@ const handleView = (v: ViewType) => {
   display: grid;
   gap: 10px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.search-results__search {
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.search-results__item {
+  background-color: var(--code-bg);
+  padding: 15px 20px;
+  border-radius: 5px;
+}
+
+.search-results__item p {
+  color: var(--text);
+  font-size: 13px;
 }
 </style>
