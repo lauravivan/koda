@@ -21,7 +21,7 @@ const categoryIcons: {
   <article class="c-card">
     <a target="_blank" :href="props.href">
       <component :is="categoryIcons[props.category]" />
-      <div>
+      <div class="c-card__content">
         <h3>{{ props.title }}</h3>
         <p>{{ props.desc }}</p>
       </div>
@@ -45,24 +45,27 @@ const categoryIcons: {
   background-color: var(--code-bg);
 }
 
-.c-card:hover .c-card__bookmark svg {
-  fill: var(--code-bg) !important;
-}
-
 .c-card a {
   flex: 1;
   display: flex;
-  column-gap: 20px;
+  row-gap: 10px;
+  flex-direction: column;
   align-items: flex-start;
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 1.5;
-  padding: 25px 15px;
+  padding: 20px 20px 10px;
   text-decoration: none;
 }
 
-.c-card a p {
+.c-card__content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.c-card__content p {
   color: var(--text);
-  font-size: 12px;
+  font-size: 0.8rem;
 }
 
 .c-card a svg {
@@ -73,7 +76,7 @@ const categoryIcons: {
 
 .c-card__bookmark svg path,
 .c-card a svg path {
-  fill: var(--social-bg);
+  fill: var(--text);
 }
 
 .c-card__bookmark {

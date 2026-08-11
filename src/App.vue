@@ -1,12 +1,8 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import Aside from "./components/Aside.vue";
-import Card from "./components/Card.vue";
 import data from "./data.ts";
-import About from "./components/About.vue";
 import Modal from "./components/Modal.vue";
 import Header from "./components/Header.vue";
-import type { AppView } from "./types/AppView.ts";
 
 const search = ref("");
 const isModalOpen = ref(false);
@@ -19,17 +15,6 @@ const searchResults = ref<
     desc?: string;
   }>
 >([]);
-const view = ref<AppView>("LINKS");
-
-const category = ref("books");
-
-const selectMenuItem = (item: string) => {
-  category.value = item;
-};
-
-const handleView = (v: AppView) => {
-  view.value = v;
-};
 
 const handleModalOpen = (isOpen: boolean) => {
   isModalOpen.value = isOpen;
@@ -65,34 +50,9 @@ const handleSearch = (event: SubmitEvent) => {
 </script>
 
 <template>
-  <Header :handleView="handleView" :handleSearch="handleSearch" />
+  <Header :handleSearch="handleSearch" />
   <main class="koda-app">
-    <template v-if="view === 'LINKS'">
-      <Aside :selectMenuItem="selectMenuItem" />
-      <div class="koda-app__content">
-        <div
-          class="koda-app__content__subcategories"
-          v-for="(categoryItems, key) in data[category]"
-          :key="key"
-        >
-          <div class="koda-app__content__subcategories__subcategory">
-            <h2>{{ key }}</h2>
-            <div>
-              <Card
-                v-for="categoryItem in categoryItems"
-                :title="categoryItem.title"
-                :href="categoryItem.link"
-                :category="category"
-                :desc="categoryItem.desc"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </template>
-    <template v-if="view === 'ABOUT'">
-      <About />
-    </template>
+    <RouterView />
 
     <Modal :handleModalOpen="handleModalOpen" :isModalOpen="isModalOpen">
       <div v-if="searchResults.length > 0" class="search-results">
@@ -114,40 +74,10 @@ const handleSearch = (event: SubmitEvent) => {
 
 <style lang="css">
 .koda-app {
-  height: 100%;
+  height: calc(100vh - var(--header-height));
   display: flex;
   width: 100%;
   min-height: 100%;
-}
-
-.koda-app__content {
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-  margin-left: var(--aside-size);
-  width: calc(100% - var(--aside-size));
-  padding: 0px 30px 30px;
-  height: 100%;
-}
-
-.koda-app__content__subcategories__subcategory {
-  display: flex;
-  flex-direction: column;
-  row-gap: 20px;
-  width: 100%;
-}
-
-.koda-app__content__subcategories__subcategory h2 {
-  background-color: var(--code-bg);
-  font-size: 22px;
-  padding: 12px 15px;
-  border-radius: 7px;
-}
-
-.koda-app__content__subcategories__subcategory > div {
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 .search-results {
@@ -176,11 +106,6 @@ const handleSearch = (event: SubmitEvent) => {
   .koda-app {
     flex-direction: column;
     row-gap: 20px;
-  }
-
-  .koda-app__content {
-    margin-left: 0;
-    width: 100%;
   }
 }
 </style>

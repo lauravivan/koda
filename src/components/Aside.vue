@@ -3,13 +3,19 @@ import data from "../data";
 
 const props = defineProps<{
   selectMenuItem: (item: string) => void;
+  selectedCategory: string;
 }>();
 </script>
 
 <template>
   <aside class="c-aside">
     <ul v-for="dt in Object.keys(data)">
-      <li v-on:click="props.selectMenuItem(dt)">{{ dt }}</li>
+      <li
+        v-on:click="props.selectMenuItem(dt)"
+        :class="{ active: props.selectedCategory === dt }"
+      >
+        {{ dt }}
+      </li>
     </ul>
   </aside>
 </template>
@@ -27,6 +33,7 @@ const props = defineProps<{
   @media (max-width: 480px) {
     position: inherit;
     width: 100%;
+    height: fit-content;
   }
 }
 
@@ -41,5 +48,10 @@ const props = defineProps<{
 .c-aside ul li:hover {
   color: var(--accent);
   cursor: pointer;
+}
+
+.c-aside .active {
+  color: var(--accent);
+  text-decoration: underline;
 }
 </style>
