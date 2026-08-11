@@ -83,7 +83,6 @@ const selectMenuItem = (item: string) => {
   width: 40%;
   display: flex;
   align-items: flex-end;
-  z-index: 200;
 
   @media (max-width: 480px) {
     width: 100%;
@@ -93,6 +92,7 @@ const selectMenuItem = (item: string) => {
 .p-homepage__content__img-wrapper img {
   width: 100%;
   object-fit: fill;
+  z-index: 200;
 }
 
 .p-homepage__links {

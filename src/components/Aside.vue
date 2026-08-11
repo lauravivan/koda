@@ -29,6 +29,7 @@ const props = defineProps<{
   height: fit-content;
   flex: 1;
   position: absolute;
+  z-index: 100;
 
   @media (max-width: 480px) {
     position: inherit;
