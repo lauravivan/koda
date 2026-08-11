@@ -62,7 +62,7 @@ const categoryIcons: {
 
 .c-card a p {
   color: var(--text);
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .c-card a svg {
