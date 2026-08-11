@@ -21,8 +21,13 @@ const props = defineProps<{
   background-color: var(--code-bg);
   padding: 20px;
   height: 80%;
-  width: 20%;
+  width: var(--aside-size);
   position: fixed;
+
+  @media (max-width: 480px) {
+    position: inherit;
+    width: 100%;
+  }
 }
 
 .c-aside ul {

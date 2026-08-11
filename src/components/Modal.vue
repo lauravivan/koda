@@ -48,5 +48,11 @@ onClickOutside(modalRef, () => {
   transform: translateY(-20px);
   transition: transform 0.2s ease;
   position: relative;
+
+  @media (max-width: 480px) {
+    width: 95%;
+    max-width: 95%;
+    max-height: 90%;
+  }
 }
 </style>

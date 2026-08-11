@@ -5,8 +5,8 @@ import Card from "./components/Card.vue";
 import data from "./data.ts";
 import About from "./components/About.vue";
 import Modal from "./components/Modal.vue";
-
-type ViewType = "LINKS" | "ABOUT";
+import Header from "./components/Header.vue";
+import type { AppView } from "./types/AppView.ts";
 
 const search = ref("");
 const isModalOpen = ref(false);
@@ -19,7 +19,7 @@ const searchResults = ref<
     desc?: string;
   }>
 >([]);
-const view = ref<ViewType>("LINKS");
+const view = ref<AppView>("LINKS");
 
 const category = ref("books");
 
@@ -27,8 +27,12 @@ const selectMenuItem = (item: string) => {
   category.value = item;
 };
 
-const handleView = (v: ViewType) => {
+const handleView = (v: AppView) => {
   view.value = v;
+};
+
+const handleModalOpen = (isOpen: boolean) => {
+  isModalOpen.value = isOpen;
 };
 
 const handleSearch = (event: SubmitEvent) => {
@@ -58,23 +62,10 @@ const handleSearch = (event: SubmitEvent) => {
     }
   }
 };
-
-const handleModalOpen = (isOpen: boolean) => {
-  isModalOpen.value = isOpen;
-};
 </script>
 
 <template>
-  <header class="header">
-    <div class="header__logo" v-on:click="handleView('LINKS')">
-      <img src="./assets/mascot.svg" />
-      <span>Koda</span>
-    </div>
-    <button @click="handleView('ABOUT')">About</button>
-    <form method="get" @submit.prevent="handleSearch">
-      <input name="search" id="search" placeholder="Search..." />
-    </form>
-  </header>
+  <Header :handleView="handleView" :handleSearch="handleSearch" />
   <main class="koda-app">
     <template v-if="view === 'LINKS'">
       <Aside :selectMenuItem="selectMenuItem" />
@@ -122,52 +113,6 @@ const handleModalOpen = (isOpen: boolean) => {
 </template>
 
 <style lang="css">
-.header {
-  display: flex;
-  column-gap: 20px;
-  padding: 20px;
-  justify-content: space-between;
-}
-
-.header button {
-  all: unset;
-  cursor: pointer;
-}
-
-.header button:hover {
-  text-decoration: underline;
-}
-
-.header__logo {
-  width: min-content;
-  position: relative;
-  cursor: pointer;
-}
-
-.header__logo:hover span {
-  transform: scale(1.1);
-}
-
-.header__logo img {
-  right: -50px;
-  bottom: 0;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-}
-
-.header__logo span {
-  font-size: 30px;
-  font-weight: 700;
-}
-
-.header form input {
-  all: unset;
-  border: 1px solid var(--border);
-  padding: 5px 10px;
-  border-radius: 10px;
-}
-
 .koda-app {
   height: 100%;
   display: flex;
@@ -179,8 +124,8 @@ const handleModalOpen = (isOpen: boolean) => {
   display: flex;
   flex-direction: column;
   row-gap: 30px;
-  margin-left: 20%;
-  width: calc(100% - 20%);
+  margin-left: var(--aside-size);
+  width: calc(100% - var(--aside-size));
   padding: 0px 30px 30px;
   height: 100%;
 }
@@ -225,5 +170,17 @@ const handleModalOpen = (isOpen: boolean) => {
 .search-results__item p {
   color: var(--text);
   font-size: 13px;
+}
+
+@media (max-width: 480px) {
+  .koda-app {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  .koda-app__content {
+    margin-left: 0;
+    width: 100%;
+  }
 }
 </style>
