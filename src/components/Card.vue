@@ -39,6 +39,7 @@ const categoryIcons: {
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
   position: relative;
+  background-color: var(--bg);
 }
 
 .c-card:hover {
@@ -51,9 +52,9 @@ const categoryIcons: {
   row-gap: 10px;
   flex-direction: column;
   align-items: flex-start;
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.5;
-  padding: 20px 20px 10px;
+  padding: 10px 20px 10px;
   text-decoration: none;
 }
 
@@ -65,7 +66,7 @@ const categoryIcons: {
 
 .c-card__content p {
   color: var(--text);
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .c-card a svg {

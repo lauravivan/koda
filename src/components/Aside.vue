@@ -25,10 +25,10 @@ const props = defineProps<{
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   background-color: var(--code-bg);
-  padding: 20px;
-  height: 80%;
-  width: var(--aside-size);
-  position: fixed;
+  padding: 30px 20px;
+  height: fit-content;
+  flex: 1;
+  position: absolute;
 
   @media (max-width: 480px) {
     position: inherit;

@@ -1,7 +1,7 @@
 <template>
   <div class="p-about">
     <div class="p-about__img-wrapper">
-      <img loading="lazy" src="../assets/about.svg" />
+      <img loading="lazy" src="../assets/undraw_walking-outside_7jfy.svg" />
     </div>
 
     <div class="p-about__info">
@@ -34,8 +34,11 @@
   row-gap: 20px;
   background-color: var(--code-bg);
   border-radius: 10px;
-  width: max-content;
+  width: 40%;
   height: max-content;
+  position: absolute;
+  top: 30%;
+  right: 5%;
 
   @media (max-width: 480px) {
     width: auto;
@@ -45,13 +48,18 @@
 }
 
 .p-about__info {
-  padding: 40px;
+  padding: 20px;
+}
+
+.p-about__img-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 
 .p-about__img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  border-radius: 10px;
+  object-fit: cover;
 }
 </style>
