@@ -31,7 +31,7 @@ const switchTheme = () => {
     <div>
       <div class="c-header__logo">
         <RouterLink to="/" class="c-header__logo__logo">
-          <img src="../assets/mascot.svg" />
+          <img src="/favicon.svg" />
           <span>Koda</span>
         </RouterLink>
       </div>
