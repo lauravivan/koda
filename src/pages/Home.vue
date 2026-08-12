@@ -16,6 +16,12 @@ const selectMenuItem = (item: string) => {
     <Aside :selectMenuItem="selectMenuItem" :selectedCategory="category" />
     <div class="p-homepage__content">
       <div class="p-homepage__content__img-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/videoseries?list=PLGa5r4TzH_OZoTsFrse-EQ0mZZAC8nlmr"
+          frameborder="10"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        />
         <img src="../assets/undraw_summer_u79u.svg" />
       </div>
       <div class="p-homepage__links">
@@ -82,17 +88,25 @@ const selectMenuItem = (item: string) => {
 .p-homepage__content__img-wrapper {
   width: 40%;
   display: flex;
-  align-items: flex-end;
+  position: relative;
 
   @media (max-width: 480px) {
     width: 100%;
   }
 }
 
+.p-homepage__content__img-wrapper iframe {
+  position: absolute;
+  right: 0;
+  border-radius: 10px;
+  width: 40%;
+}
+
 .p-homepage__content__img-wrapper img {
   width: 100%;
   object-fit: fill;
   z-index: 200;
+  align-self: end;
 }
 
 .p-homepage__links {
