@@ -4,6 +4,8 @@ import Search from "./icons/Search.vue";
 import Sun from "./icons/Sun.vue";
 import Moon from "./icons/Moon.vue";
 import System from "./icons/System.vue";
+import Github from "./icons/Github.vue";
+import GitubLight from "./icons/GitubLight.vue";
 
 const theme = ref<"light" | "dark" | "system">("system");
 
@@ -44,6 +46,13 @@ const switchTheme = () => {
         <Moon v-if="theme === 'dark'" />
         <System v-if="theme === 'system'" />
       </button>
+      <a
+        class="c-header__github"
+        target="_blank"
+        href="https://github.com/lauravivan/koda"
+        ><Github v-if="theme === 'light'" />
+        <GitubLight v-else />
+      </a>
     </div>
     <form
       class="c-header__search-form"
@@ -78,6 +87,15 @@ const switchTheme = () => {
   all: unset;
   cursor: pointer;
   margin: 0 auto;
+}
+
+.c-header__github {
+  display: block;
+}
+
+.c-header__github svg {
+  height: 30px;
+  width: 30px;
 }
 
 .c-header__search-btn {

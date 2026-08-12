@@ -8,7 +8,7 @@
       <p>Hi, I’m Laura.</p>
       <p>
         Welcome to my library of references in Web Development, Tech World and
-        some other stuff
+        some other cool stuff
       </p>
     </div>
   </div>
