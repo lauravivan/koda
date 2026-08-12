@@ -167,6 +167,10 @@ const data: Data = {
         title: "Adrian Roselli",
         link: "https://adrianroselli.com/",
       },
+        {
+        title: "Chip Huyen",
+        link: "https://huyenchip.com/",
+      },
     ],
   },
   articles: {
@@ -258,6 +262,10 @@ const data: Data = {
       {
         title: "Yalc, the `npm link` alternative that does work",
         link: "https://www.divotion.com/blog/yalc-npm-link-alternative-that-does-work",
+      },
+      {
+        title: "MIT Technology Review",
+        link: "https://mittechreview.com.br/",
       },
     ],
     learning: [
