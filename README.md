@@ -1,5 +1,33 @@
-# Vue 3 + TypeScript + Vite
+# koda
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<img src="./public/favicon.svg" alt="Koda mascot" width="100px" height="100px" />
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Description
+
+[Koda](https://koda.arualvivan.com/) is a curated collection of links I’ve gathered over time, some related to the tech world, but also unrelated things I find cool.
+
+## Features
+
+In Koda you can switch themes (light, dark, system), can search with plain text to find related results and listen to music (a youtube frame with my favorite playlist of all time)
+
+## Project Setup
+
+```sh
+npm install
+```
+
+### Compile and Hot-Reload for Development
+
+```sh
+npm run dev
+```
+
+### Compile and Minify for Production
+
+```sh
+npm run build
+```
+
+---
+
+Made with 💜 by Laura
